@@ -39,6 +39,7 @@ jobs:
             npm run build
           fi
 
+      # 👇 wichtig: GitHub Pages braucht ein 404.html als Fallback für SPAs
       - name: Add 404 fallback
         run: cp dist/index.html dist/404.html
 
