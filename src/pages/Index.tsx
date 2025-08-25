@@ -14,9 +14,19 @@ const Index = () => {
     { icon: Zap, name: "СИЛОВЫЕ", description: "акцент на крупные группы мышц" },
     { icon: Target, name: "СТАТИЧЕСКИЕ", description: "акцент на глубокий слой мышц" },
     { icon: Sparkles, name: "СТАТО-ДИНАМИЧЕСКИЕ", description: "работа всего тела" },
-    { icon: Heart, name: "ДИНАМИЧЕСКИЕ", description: "работа сердечно-сосудистой системы" },
+    { icon: Heart, name: "ДИНАМИЧЕСКИЕ", description: "работа дыхательной, сердечно-сосудистой, лимфатической систем" },
     { icon: Users, name: "МОБИЛЬНОСТЬ", description: "опорно-двигательный аппарат" },
     { icon: Calendar, name: "РАСТЯЖКА И ГИБКОСТЬ", description: "красивое и здоровое тело" }
+  ];
+
+  const additionalWorkouts = [
+    "Красивая осанка и работа с болью в спине",
+    "Дыхание - ключ к решению многих проблем", 
+    "МФР - самый полезный самомассаж",
+    "Работа с мышцами тазового дна",
+    "Внимание к внутреннему состоянию",
+    "Гимнастика для глаз",
+    "Упражнения для шеи"
   ];
 
   const benefits = [
@@ -139,6 +149,34 @@ const Index = () => {
             </p>
           </div>
 
+          {/* Basic Course and Regular Workouts */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+            <Card className="p-8 shadow-strong">
+              <CardContent className="pt-6 text-center">
+                <h3 className="text-2xl font-heading font-bold mb-4 text-primary">Базовый курс</h3>
+                <ul className="text-left space-y-3 text-muted-foreground">
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Лекция по Анатомии</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span>9 тренировок, которые подойдут для людей любого уровня спортивной подготовки</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+            
+            <Card className="p-8 shadow-strong">
+              <CardContent className="pt-6 text-center">
+                <h3 className="text-2xl font-heading font-bold mb-4 text-primary">Регулярные тренировки</h3>
+                <p className="text-muted-foreground">
+                  Разный уровень сложности для продолжающих занятия после базового курса
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {workoutTypes.map((type, index) => (
               <Card key={index} className="text-center p-8 shadow-medium hover:shadow-strong transition-all duration-300 hover:scale-105">
@@ -155,20 +193,65 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="text-center">
+          <div className="text-center mb-12">
             <div className="bg-gradient-sunset text-white p-12 rounded-3xl shadow-strong max-w-4xl mx-auto">
-              <h3 className="text-3xl font-heading font-bold mb-4">
+              <h3 className="text-3xl font-heading font-bold mb-6">
                 БУДЕТ ВСЁ, ЧТОБЫ БЫТЬ ЗДОРОВЫМ И КРАСИВЫМ!
               </h3>
-              <p className="text-lg opacity-90 mb-6">
-                Красивая осанка, работа с болью в спине, дыхание, МФР, работа с мышцами тазового дна, внимание к внутреннему состоянию, гимнастика для глаз, упражнения для шеи
-              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left mb-8">
+                {additionalWorkouts.map((workout, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-white rounded-full flex-shrink-0"></div>
+                    <span className="text-sm opacity-90">{workout}</span>
+                  </div>
+                ))}
+              </div>
               <WhatsAppButton
                 phoneNumber="33766102344"
                 className="bg-white text-primary hover:bg-white/90 px-8 py-4 text-lg rounded-full"
               >
                 Узнать подробнее
               </WhatsAppButton>
+            </div>
+          </div>
+
+          {/* Equipment Section */}
+          <div className="bg-card rounded-2xl p-8 shadow-medium max-w-4xl mx-auto">
+            <h3 className="text-2xl font-heading font-semibold text-center mb-8">Что нужно для занятий</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Zap className="w-8 h-8 text-primary" />
+                </div>
+                <h4 className="font-semibold mb-2">Доступ к интернету</h4>
+                <p className="text-sm text-muted-foreground">
+                  Подключайтесь с любого устройства: смартфона, планшета или ноутбука
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Target className="w-8 h-8 text-primary" />
+                </div>
+                <h4 className="font-semibold mb-2">Пространство 2 на 2 метра</h4>
+                <p className="text-sm text-muted-foreground">
+                  Минимальное пространство для установки устройства на расстоянии 1,5–2 метра
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Heart className="w-8 h-8 text-primary" />
+                </div>
+                <h4 className="font-semibold mb-2">Минимальный инвентарь</h4>
+                <div className="text-sm text-muted-foreground">
+                  <p className="mb-2">Тренировки можно делать без инвентаря!</p>
+                  <p className="mb-1">Для лучшего результата:</p>
+                  <ul className="text-xs space-y-1">
+                    <li>• Пенный ролл для МФР</li>
+                    <li>• Фитнес резинка</li>
+                    <li>• Мячик для МФР стоп</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -213,12 +296,54 @@ const Index = () => {
       {/* Instagram Section */}
       <InstagramPreview />
 
+      {/* Free Videos Section */}
+      <section className="py-20 bg-gradient-to-br from-accent/5 to-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-foreground">
+              Бесплатный контент для знакомства
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
+              Я дарю вам вебинар по анатомии и первую вводную тренировку базового курса, чтобы вы могли испытать на себе волшебство осознанного подхода в тренировках.
+            </p>
+            <Badge className="bg-accent text-white text-lg px-6 py-2">
+              Не упусти эту прекрасную возможность заниматься с умом!
+            </Badge>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <YouTubeVideo
+              videoId="blrVsytRabE"
+              title="Видеолекция по анатомии"
+              description="Узнайте как устроены мышцы живота и интимные мышцы, 3 причины выпирающего живота, роль диафрагмы и многое другое!"
+            />
+            <YouTubeVideo
+              videoId="9sH3F0ueEQI"
+              title="Первая вводная тренировка"
+              description="43 минуты без инвентаря. Основная часть первой тренировки базового курса для определения вашего уровня подготовки."
+            />
+          </div>
+
+          <div className="text-center">
+            <div className="bg-primary/5 rounded-2xl p-8 max-w-3xl mx-auto">
+              <h3 className="text-2xl font-heading font-semibold mb-4">Почему важно посмотреть вебинар по анатомии</h3>
+              <p className="text-muted-foreground mb-6">
+                Наше тело управляется мозгом. И когда мозг через образы, наглядно видит как мышцы устроены, как они работают, он гораздо лучше управляет ими. Это и называется осознанными тренировками.
+              </p>
+              <p className="text-sm text-muted-foreground italic">
+                В базовом курсе теория неразрывно связана с практикой.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* YouTube Videos Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-foreground">
-              Полезные видео на YouTube
+              Дополнительные полезные видео
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Изучите основы йоги и фитнеса с моими обучающими видео
