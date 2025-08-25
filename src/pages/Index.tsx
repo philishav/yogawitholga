@@ -79,9 +79,9 @@ const Index = () => {
             </WhatsAppButton>
             
             <Button 
-              variant="outline"
+              variant="hero"
               size="lg"
-              className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-6 text-lg rounded-full backdrop-blur-sm"
+              className="px-8 py-6 text-lg rounded-full shadow-strong"
               onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Узнать больше
