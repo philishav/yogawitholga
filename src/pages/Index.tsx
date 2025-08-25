@@ -55,7 +55,7 @@ const Index = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
-        <div className="absolute inset-0 bg-gradient-hero" />
+        <div className="absolute inset-0 bg-black/30" />
         
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
           <Badge className="mb-6 bg-white/20 text-white border-white/30 backdrop-blur-sm">
