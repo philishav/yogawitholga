@@ -100,8 +100,8 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
             <div className="relative">
               <img 
-                src="/lovable-uploads/25a21f21-5ab2-4256-9681-f34b8c8196e5.png" 
-                alt="Olga - Yoga Instructor"
+                src="/lovable-uploads/71c52938-5199-498e-bd0a-cb49a706f9c8.png" 
+                alt="Olga - Yoga Instructor in tree pose by the water"
                 className="w-full rounded-2xl shadow-strong"
               />
               <div className="absolute -bottom-6 -right-6 bg-accent text-white p-6 rounded-2xl shadow-strong">
