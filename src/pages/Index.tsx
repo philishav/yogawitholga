@@ -112,6 +112,13 @@ const Index = () => {
             </div>
             
             <div>
+              <div className="mb-6">
+                <img 
+                  src="/lovable-uploads/71c52938-5199-498e-bd0a-cb49a706f9c8.png" 
+                  alt="Olga practicing yoga" 
+                  className="w-full max-w-sm mx-auto lg:mx-0 rounded-xl shadow-medium mb-4" 
+                />
+              </div>
               <Badge className="mb-4 bg-accent/10 text-accent border-accent/20">
                 Профессиональный тренер
               </Badge>
