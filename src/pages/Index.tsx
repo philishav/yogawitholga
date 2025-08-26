@@ -7,7 +7,7 @@ import YouTubeVideo from "@/components/YouTubeVideo";
 import PricingSection from "@/components/PricingSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import heroImage from "@/assets/hero-yoga.jpg";
-// import olgaPortrait from "@/assets/olga-yoga-pose.png";
+import olgaPortrait from "@/assets/olga-portrait.jpg";
 
 const Index = () => {
   const workoutTypes = [
@@ -100,8 +100,8 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
             <div className="relative">
               <img 
-                src="/lovable-uploads/71c52938-5199-498e-bd0a-cb49a706f9c8.png" 
-                alt="Olga - Yoga Instructor in tree pose by the water"
+                src={olgaPortrait} 
+                alt="Olga - Yoga Instructor"
                 className="w-full rounded-2xl shadow-strong"
               />
               <div className="absolute -bottom-6 -right-6 bg-accent text-white p-6 rounded-2xl shadow-strong">
@@ -112,13 +112,6 @@ const Index = () => {
             </div>
             
             <div>
-              <div className="mb-6">
-                <img 
-                  src="/lovable-uploads/71c52938-5199-498e-bd0a-cb49a706f9c8.png" 
-                  alt="Olga practicing yoga" 
-                  className="w-full max-w-sm mx-auto lg:mx-0 rounded-xl shadow-medium mb-4" 
-                />
-              </div>
               <Badge className="mb-4 bg-accent/10 text-accent border-accent/20">
                 Профессиональный тренер
               </Badge>

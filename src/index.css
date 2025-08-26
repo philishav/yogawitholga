@@ -121,15 +121,9 @@ All colors MUST be HSL.
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-  
   body {
     @apply bg-background text-foreground font-body;
     font-feature-settings: "rlig" 1, "calt" 1;
-    margin: 0;
-    padding: 0;
   }
   
   h1, h2, h3, h4, h5, h6 {
