@@ -6,7 +6,7 @@ import { componentTagger } from 'lovable-tagger'
 
 // Wichtig: "base" muss exakt dein Repo-Name mit führendem und abschließenden Slash sein.
 export default defineConfig(({ mode }) => ({
-  base: '/yogawitholga-revamp/',
+  base: '/yogawitholga/',
 
   plugins: [
     react(),
