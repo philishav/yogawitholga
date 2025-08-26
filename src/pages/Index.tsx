@@ -7,7 +7,7 @@ import YouTubeVideo from "@/components/YouTubeVideo";
 import PricingSection from "@/components/PricingSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import heroImage from "@/assets/hero-yoga.jpg";
-import olgaPortrait from "@/assets/olga-portrait.jpg";
+// import olgaPortrait from "@/assets/olga-yoga-pose.png";
 
 const Index = () => {
   const workoutTypes = [
@@ -100,7 +100,7 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
             <div className="relative">
               <img 
-                src={olgaPortrait} 
+                src="/lovable-uploads/25a21f21-5ab2-4256-9681-f34b8c8196e5.png" 
                 alt="Olga - Yoga Instructor"
                 className="w-full rounded-2xl shadow-strong"
               />
